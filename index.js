@@ -120,6 +120,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const todoIndex = todos.findIndex((todo) => todo.id === id)
         if (todoIndex !== -1) {
             todos[todoIndex].completed = !todos[todoIndex].completed
+            if (todos[todoIndex].completed) {
+                const editBtn = listItem.querySelector(".edit-btn")
+                editBtn.remove();
+            } else {
+                const actionArea = listItem.querySelector(".action-buttons")
+                actionArea.innerHTML = `
+                <button class="edit-btn" onclick="editTask(this)">✏️</button>
+                <button class="delete-btn" onclick="deleteTask(this)">🗑️</button>
+                `     
+            }
             saveTodos()
         }
         listItem.classList.toggle("completed")
