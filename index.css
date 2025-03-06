@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #6ac0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    h1 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    .icon {
+        font-size: 28px;
+    }
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-field {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 50px;
+    font-size: 18px;
+    color: black;
+}
+
+.edit-input{
+    flex: 1;
+    background-color: #f0f0f0;
+    font-size: 18px;
+    color: black;
+    border-radius: 5px;
+}
+
+.add-btn {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    width: 45px;
+    height: 45px;
+    background-color: #32cd32;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+    .success {
+        color: #32cd32;
+    }
+    
+    .error {
+        color: #ff0000;
+    }
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo-item {
+    background-color: #f0f0f0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-text {
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+}
+
+.completed {
+    .todo-text{
+        text-decoration: line-through;
+    }
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #666;
+}
